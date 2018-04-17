@@ -1,0 +1,34 @@
+am startservice -a cn.nubia.autolog --ei enable_log 1    
+am startservice -a cn.nubia.autolog --ei enable_log 0
+
+Intent intent = getIntent();
+int pid = intent.getIntExtra("pid", -1); // 第二个参数为default value
+String str = intent.getStringExtra("str");
+
+am startservice -a cn.nubia.AudioTestService --ei spk 1    
+am startservice -a cn.nubia.AudioTestService --ei spk 0
+
+am startservice -a cn.nubia.AudioTestService --ei rec 1    
+am startservice -a cn.nubia.AudioTestService --ei rec 0
+
+am startservice -a cn.nubia.AudioTestService --ei mic1 1    
+am startservice -a cn.nubia.AudioTestService --ei mic1 0
+
+am startservice -a cn.nubia.AudioTestService --ei mic2 1    
+am startservice -a cn.nubia.AudioTestService --ei mic2 0
+
+am startservice -a cn.nubia.AudioTestService --ei audio 1    
+am startservice -a cn.nubia.AudioTestService --ei audio 11
+
+am startservice -a cn.nubia.AudioTestService --ei audio 2    
+am startservice -a cn.nubia.AudioTestService --ei audio 22
+
+am startservice -a cn.nubia.AudioTestService --ei audio 3    
+am startservice -a cn.nubia.AudioTestService --ei audio 33
+
+am startservice -a cn.nubia.AudioTestService --ei audio 4    
+am startservice -a cn.nubia.AudioTestService --ei audio 44
+
+am startservice -a cn.nubia.AudioTestService --ei audio 1~4    
+am startservice -a cn.nubia.AudioTestService --ei audio -1
+
