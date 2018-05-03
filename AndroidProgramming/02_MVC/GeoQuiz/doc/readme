@@ -1,0 +1,6 @@
+1、创建TrueFalse对象——问题信息跟答案2个属性
+2、初始化对象数据集——TrueFalse[] mAnswerKey
+3、使用True|False的2个Button进行答题。
+4、使用next的button，进行问题更新。
+5、将用户答题的结果（True|False Button）跟对象的答案进行对比确认
+6、使用toast输出结果

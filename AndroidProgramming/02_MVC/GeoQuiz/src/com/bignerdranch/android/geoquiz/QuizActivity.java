@@ -15,7 +15,7 @@ public class QuizActivity extends Activity {
     Button mNextButton;
 
     TextView mQuestionTextView;
-    
+    //数据源
     TrueFalse[] mAnswerKey = new TrueFalse[] {
             new TrueFalse(R.string.question_oceans, true),
             new TrueFalse(R.string.question_mideast, false),
@@ -25,12 +25,12 @@ public class QuizActivity extends Activity {
     };
     
     int mCurrentIndex = 0;
-    
+    //根据当前索引变化，获取TrueFalse对象，更新问题信息。
     private void updateQuestion() {
         int question = mAnswerKey[mCurrentIndex].getQuestion();
         mQuestionTextView.setText(question);
     }
-    
+    //根据外界传入的true|false答案跟当前TrueFalse对象中的答案进行对比，用toast显示结果
     private void checkAnswer(boolean userPressedTrue) {
         boolean answerIsTrue = mAnswerKey[mCurrentIndex].isTrueQuestion();
         
