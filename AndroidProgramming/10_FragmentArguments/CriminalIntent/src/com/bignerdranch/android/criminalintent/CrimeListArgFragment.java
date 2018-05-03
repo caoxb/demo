@@ -23,7 +23,7 @@ public class CrimeListArgFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getActivity().setTitle(R.string.crimes_title);
-        mCrimes = CrimeLab.get(getActivity()).getCrimes();
+        mCrimes = CrimeArgLab.get(getActivity()).getCrimes();
         CrimeAdapter adapter = new CrimeAdapter(mCrimes);
         setListAdapter(adapter);
     }
@@ -33,7 +33,7 @@ public class CrimeListArgFragment extends ListFragment {
         Crime c = ((CrimeAdapter)getListAdapter()).getItem(position);
         // start an instance of CrimeActivity
         Intent i = new Intent(getActivity(), CrimeActivity.class);
-        i.putExtra(CrimeFragment.EXTRA_CRIME_ID, c.getId());
+        i.putExtra(CrimeArgFragment.EXTRA_CRIME_ID, c.getId());
         startActivityForResult(i, 0);
     }
 
