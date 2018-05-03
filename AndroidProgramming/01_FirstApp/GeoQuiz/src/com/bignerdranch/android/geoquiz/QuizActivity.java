@@ -21,9 +21,7 @@ public class QuizActivity extends Activity {
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(QuizActivity.this, 
-                        R.string.incorrect_toast, Toast.LENGTH_SHORT)
-                        .show();
+                Toast.makeText(QuizActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -31,9 +29,7 @@ public class QuizActivity extends Activity {
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(QuizActivity.this, 
-                        R.string.correct_toast, Toast.LENGTH_SHORT)
-                        .show();
+                Toast.makeText(QuizActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT).show();
             }
         });
     }
