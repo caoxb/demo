@@ -1,0 +1,7 @@
+.settings
+gen
+bin
+.classpath
+.project
+.project.properties
+/usr/bin/bash: wq: command not found

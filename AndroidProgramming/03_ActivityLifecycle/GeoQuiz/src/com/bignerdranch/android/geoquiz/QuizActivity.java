@@ -56,7 +56,7 @@ public class QuizActivity extends Activity {
         Log.d(TAG, "onCreate() called");
         setContentView(R.layout.activity_quiz);
 
-        //mQuestionTextView = (TextView)findViewById(R.id.question_text_view);
+        mQuestionTextView = (TextView)findViewById(R.id.question_text_view);
 
         mTrueButton = (Button)findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
@@ -82,14 +82,14 @@ public class QuizActivity extends Activity {
                 updateQuestion();
             }
         });
-
+        //生命周期变动时，根据是否有保存值，调用当前答题索引
         if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
         }
         
         updateQuestion();
     }
-
+    //发生旋转及其他意外时调用，保存当前答题索引
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
